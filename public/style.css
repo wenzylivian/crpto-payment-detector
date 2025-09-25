@@ -1,0 +1,104 @@
+/* ===== Reset some default styles ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 15px;
+    color: #2c3e50;
+  }
+  
+  /* ===== Header ===== */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  }
+  
+  /* ===== Address Info ===== */
+  p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    word-break: break-all; /* handle long addresses */
+  }
+  
+  /* ===== Alerts Container ===== */
+  #alerts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* ===== Individual Alert ===== */
+  .alert {
+    background: #fffbeb;
+    padding: 18px 20px;
+    border-left: 6px solid #f1c40f;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: left;
+    animation: slideIn 0.5s ease forwards;
+  }
+  
+  /* ===== Slide-in animation ===== */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* ===== Responsive Typography ===== */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .alert {
+      padding: 15px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    .alert {
+      padding: 12px;
+      font-size: 0.85rem;
+      border-left-width: 4px;
+      border-radius: 10px;
+    }
+  }
+  
+  /* ===== Optional: Make the page scrollable nicely ===== */
+  body, html {
+    overflow-x: hidden;
+  }
+  
